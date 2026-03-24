@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ATELIER | Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Work+Sans:wght@200;300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "accent": "#b45309", // Warm ochre/gold accent for call to actions
+                        "background": "#ffffff",
+                        "on-background": "#000000",
+                        "surface": "#fafafa",
+                        "on-surface": "#000000",
+                        "outline": "#e5e5e5",
+                    },
+                    fontFamily: {
+                        "serif": ["Noto Serif", "serif"],
+                        "sans": ["Work Sans", "sans-serif"],
+                    },
+                    borderRadius: { 
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px" 
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .step-inactive {
+            color: #a3a3a3;
+        }
+        .step-active {
+            color: #000000;
+            border-bottom: 1px solid #000000;
+        }
+        .minimal-input {
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            background: transparent;
+            padding: 0.75rem 0;
+            transition: border-color 0.3s ease;
+        }
+        .minimal-input:focus {
+            outline: none;
+            border-color: #000000;
+            box-shadow: none;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        ::selection {
+            background: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-sans selection:bg-black selection:text-white">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-none">
+<div class="font-['Noto_Serif'] text-2xl tracking-[0.3em] font-bold text-black dark:text-white">ATELIER</div>
+<nav class="hidden md:flex space-x-12 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Collections</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Lookbook</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Archive</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="#">Le Journal</a>
+</nav>
+<div class="flex items-center space-x-6">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">search</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">person</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">shopping_bag</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pt-40 pb-32 px-12 max-w-[1400px] mx-auto">
+<!-- Progress Steps -->
+<div class="flex justify-center mb-24">
+<div class="flex items-center space-x-12 font-serif text-[11px] tracking-[0.4em] uppercase">
+<span class="step-active pb-1">01 Shipping</span>
+<span class="w-12 h-[1px] bg-neutral-200"></span>
+<span class="step-inactive">02 Payment</span>
+<span class="w-12 h-[1px] bg-neutral-200"></span>
+<span class="step-inactive">03 Review</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+<!-- Checkout Form -->
+<section class="lg:col-span-7 space-y-20">
+<div class="space-y-12">
+<h2 class="font-serif text-3xl font-light tracking-tight">Shipping Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">First Name</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="Julian" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">Last Name</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="Vance" type="text"/>
+</div>
+<div class="md:col-span-2 flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">Delivery Address</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="722 Fifth Avenue, Manhattan" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">City</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="New York" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">Postal Code</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="10019" type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-12 pt-12">
+<h2 class="font-serif text-3xl font-light tracking-tight">Payment Method</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<button class="border border-black p-8 flex flex-col items-center justify-center space-y-4 transition-all hover:bg-neutral-50">
+<span class="material-symbols-outlined text-black text-3xl">credit_card</span>
+<span class="text-[10px] tracking-[0.2em] uppercase">Credit Card</span>
+</button>
+<button class="border border-neutral-100 p-8 flex flex-col items-center justify-center space-y-4 opacity-40 hover:opacity-100 transition-all hover:bg-neutral-50">
+<span class="material-symbols-outlined text-black text-3xl">account_balance_wallet</span>
+<span class="text-[10px] tracking-[0.2em] uppercase">Wallet</span>
+</button>
+<button class="border border-neutral-100 p-8 flex flex-col items-center justify-center space-y-4 opacity-40 hover:opacity-100 transition-all hover:bg-neutral-50">
+<span class="material-symbols-outlined text-black text-3xl">currency_bitcoin</span>
+<span class="text-[10px] tracking-[0.2em] uppercase">Crypto</span>
+</button>
+</div>
+<div class="space-y-10">
+<div class="flex flex-col space-y-2 relative">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">Card Number</label>
+<input class="minimal-input font-serif italic text-lg pr-10" placeholder="**** **** **** 8829" type="text"/>
+<span class="absolute right-0 bottom-3 material-symbols-outlined text-neutral-300 text-sm">lock</span>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">Expiry Date</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="MM / YY" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="text-[10px] tracking-[0.2em] uppercase text-neutral-400">CVC</label>
+<input class="minimal-input font-serif italic text-lg" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-12">
+<button class="w-full bg-black text-white py-8 px-12 font-sans font-medium tracking-[0.5em] text-xs uppercase hover:bg-neutral-900 transition-all duration-500 active:scale-[0.99]">
+                        Authorize Transaction
+                    </button>
+<div class="flex items-center justify-center space-x-2 mt-8 opacity-40">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-[9px] tracking-[0.2em] uppercase">Secure 256-Bit Encrypted Connection</span>
+</div>
+</div>
+</section>
+<!-- Sidebar Summary -->
+<aside class="lg:col-span-5">
+<div class="bg-neutral-50 p-16 space-y-12">
+<h3 class="font-serif text-2xl font-light tracking-tight border-b border-neutral-200 pb-8">Order Summary</h3>
+<div class="space-y-10">
+<!-- Item -->
+<div class="flex items-start space-x-6">
+<div class="w-24 h-32 flex-shrink-0 bg-neutral-200">
+<img alt="Silk Shirt" class="w-full h-full object-cover grayscale mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGPhviknQo9cuq5uIidIP_omGkXPzNcyZ1t27mglzP-Krqp4Of3ZnA796ZC1LrjiyStCI-4PqBkWAXsrQwPkvXbOpwYM2R1mXm7kT0J8JJuKasMSbu7EZQ2Jc6Hln7Ig703J0ovTJ7jGZct_J-Ycjibug-Lstrd_N8NmUHBOxVSVMbNHDRKIOBmjpK9-OMoRVF94Tj9218Wd-A_Swz2UEF-5m4TEkMvV1Vmq8G0bxUoJvVNT_rYG2Ps5nCqD4fKNU9hOFU3XtZPyc"/>
+</div>
+<div class="flex-1 space-y-1">
+<h4 class="font-serif text-sm tracking-wide uppercase">Obsidian Silk Shirt</h4>
+<p class="text-[10px] tracking-widest text-neutral-400 uppercase">Coll. No. 04 / Noir</p>
+<div class="flex justify-between items-end pt-4">
+<span class="text-[10px] text-neutral-400 uppercase">Qty: 01</span>
+<span class="font-serif text-base">$1,240.00</span>
+</div>
+</div>
+</div>
+<!-- Item -->
+<div class="flex items-start space-x-6">
+<div class="w-24 h-32 flex-shrink-0 bg-neutral-200">
+<img alt="Leather Clutch" class="w-full h-full object-cover grayscale mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL18ee8TRbbdYZ1j55WTUHkJDwM7KsDvFzKYrQyYENzNHBE-001cBQtboCVp08YKdyWeTtn_cBWdwu_gQomeRIK92vS03BoFxI_TY1RedmKeAnVdVDzzbTK3qRXUBYUuVa9waQbtC3Qb69ESLSuQMbAZk6hGrqBEoJu2CDeu7C2XfulKwpXA71UERjfn54tVSnSGmsCIalODUi1l3l52P7C3W1wQK1JoJEvltfNY4LUis7AiIA1Q21t0LYXKDWq2PMf4C_UGZY4sw"/>
+</div>
+<div class="flex-1 space-y-1">
+<h4 class="font-serif text-sm tracking-wide uppercase">Midnight Clutch</h4>
+<p class="text-[10px] tracking-widest text-neutral-400 uppercase">Limited / Leather</p>
+<div class="flex justify-between items-end pt-4">
+<span class="text-[10px] text-neutral-400 uppercase">Qty: 01</span>
+<span class="font-serif text-base">$2,850.00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-neutral-200 space-y-4 text-[11px] tracking-widest uppercase">
+<div class="flex justify-between">
+<span class="text-neutral-500">Subtotal</span>
+<span class="font-serif text-sm">$4,090.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-500">Express Shipping</span>
+<span class="font-serif text-sm text-neutral-400 italic">Complimentary</span>
+</div>
+<div class="flex justify-between pt-6 border-t border-neutral-200">
+<span class="font-medium">Total Due</span>
+<span class="font-serif text-2xl font-light">$4,090.00</span>
+</div>
+</div>
+<div class="pt-10">
+<label class="text-[9px] tracking-[0.2em] uppercase text-neutral-400 block mb-3 text-center">Promo Code</label>
+<input class="w-full bg-white border border-neutral-200 py-3 text-center font-serif text-xs tracking-widest focus:outline-none focus:border-black transition-colors" placeholder="ENTER CODE" type="text"/>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full">
+<div class="md:col-span-1 relative h-64 overflow-hidden">
+<div class="font-['Noto_Serif'] text-6xl font-black tracking-tighter opacity-10 dark:opacity-20 vertical-text absolute -left-4 top-0">ATELIER</div>
+</div>
+<div class="flex flex-col space-y-6">
+<h5 class="font-['Work_Sans'] font-medium tracking-[0.1em] text-xs uppercase text-black dark:text-white">Shop</h5>
+<nav class="flex flex-col space-y-4 font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Collections</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">New Arrivals</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Bespoke</a>
+</nav>
+</div>
+<div class="flex flex-col space-y-6">
+<h5 class="font-['Work_Sans'] font-medium tracking-[0.1em] text-xs uppercase text-black dark:text-white">Company</h5>
+<nav class="flex flex-col space-y-4 font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Sustainability</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Terms of Service</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-col space-y-6">
+<h5 class="font-['Work_Sans'] font-medium tracking-[0.1em] text-xs uppercase text-black dark:text-white">Follow</h5>
+<nav class="flex flex-col space-y-4 font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Instagram</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Journal</a>
+</nav>
+</div>
+</div>
+<div class="px-12 pb-12">
+<p class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-400">© 2024 ATELIER. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>

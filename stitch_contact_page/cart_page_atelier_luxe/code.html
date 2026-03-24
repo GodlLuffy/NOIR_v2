@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ATELIER | YOUR SELECTION</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Work Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-headline { font-family: 'Noto Serif', serif; }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .btn-atelier {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .btn-atelier::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .btn-atelier:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "secondary": "#717171",
+                        "accent": "#a16207", // Deep Gold/Yellow-700
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-black text-black dark:text-white min-h-screen selection:bg-accent/20">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-neutral-100 dark:border-neutral-900">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-none">
+<div class="font-['Noto_Serif'] text-2xl tracking-[0.3em] font-bold text-black dark:text-white">ATELIER</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Collections</a>
+<a class="text-black dark:text-white border-b border-yellow-700 pb-1 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Lookbook</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Archive</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Le Journal</a>
+</div>
+<div class="flex items-center space-x-8">
+<button class="text-black dark:text-white hover:opacity-70 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-black dark:text-white hover:opacity-70 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="text-black dark:text-white hover:opacity-70 transition-opacity duration-300 active:scale-95 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 text-[9px] font-bold bg-black dark:bg-white text-white dark:text-black h-4 w-4 rounded-full flex items-center justify-center">3</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-48 pb-32 px-12 max-w-[1600px] mx-auto">
+<div class="flex flex-col lg:flex-row gap-24 items-start">
+<!-- Cart Items Section -->
+<div class="flex-1 w-full">
+<header class="mb-20">
+<h1 class="text-6xl md:text-8xl font-headline font-light tracking-tight mb-6">Your Selection</h1>
+<div class="flex items-center gap-4 text-neutral-400 font-body uppercase tracking-[0.3em] text-[10px]">
+<span>Cart / 03 Pieces</span>
+<div class="h-px w-20 bg-neutral-200 dark:bg-neutral-800"></div>
+</div>
+</header>
+<div class="space-y-24">
+<!-- Large Item 1 -->
+<div class="group grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 aspect-[4/5] overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up of premium leather sneaker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXkaCABsxQ2D-G-viIXawoi6yjVARdBOHWDlvAHzTZNkIeuAXxn3VNdfvIG2D4XmUwmoRo75qeXGvsB6LoLOvCQ7kIHLmQAdQbpWr4Ca2mO57o2qLjQyEgAB3_kA9ZbZnJ4f0MuClbSYIxYizPhMLLD-PmR3q2pzXu1qfZL4OFFNUlywh1egvgGkOV3DSvUBjjiWjP0wQPiLpDUOut8G2QU2OXGf1qMrOHBMI-2jVGkUgPN_gTqJtbFrPpoNfU1h_Ezifj9eKqx9U"/>
+</div>
+<div class="md:col-span-7 flex flex-col h-full justify-between py-4">
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-3xl font-headline font-light">Midnight Velvet Sneaker</h3>
+<p class="text-neutral-400 text-xs uppercase tracking-widest mt-2">Noir Collection / Leather</p>
+</div>
+<button class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-end justify-between mt-12">
+<div class="flex items-center space-x-8 border-b border-neutral-200 dark:border-neutral-800 pb-2">
+<button class="text-neutral-400 hover:text-black dark:hover:text-white"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-sm tracking-widest">01</span>
+<button class="text-neutral-400 hover:text-black dark:hover:text-white"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<p class="text-2xl font-headline">$1,240.00</p>
+</div>
+</div>
+</div>
+<!-- Large Item 2 -->
+<div class="group grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 aspect-[4/5] overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Luxury minimalist watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAanD6qvH_H-Agm7g9Ton6N-89XBnhVXJ1aNnbXk66Xi_bdzbtfhGtu-obazWrN4NtJHUGUBEWzpm-DpOWqOY9KT5hhLaFIVb-QSpu30I7HHPkTi2Gbs6Ifi-9CFb6ZMl2tvOBvUnNa2-ATwyBY_z7wttO0mxPz2Wv5zNFkLP5t7o7l_vhm1FQrAoZkXBsRaP-gqHe1z0oNuL0sSMXoNezS3ytwiBCaFMEsQfH389Z5dUHN1GBxtpM3qD1Tgh7t29MFNFG7jCvE498"/>
+</div>
+<div class="md:col-span-7 flex flex-col h-full justify-between py-4">
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-3xl font-headline font-light">Obsidian Chronograph</h3>
+<p class="text-neutral-400 text-xs uppercase tracking-widest mt-2">Limited Edition / Swiss</p>
+</div>
+<button class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-end justify-between mt-12">
+<div class="flex items-center space-x-8 border-b border-neutral-200 dark:border-neutral-800 pb-2">
+<button class="text-neutral-400 hover:text-black dark:hover:text-white"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-sm tracking-widest">01</span>
+<button class="text-neutral-400 hover:text-black dark:hover:text-white"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<p class="text-2xl font-headline">$4,850.00</p>
+</div>
+</div>
+</div>
+<!-- Large Item 3 -->
+<div class="group grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 aspect-[4/5] overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Designer coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvotiTa-aecLI8gz2fAubgwp13C-tDY6Zk7AX54x2T2tY2NJLprLQFoA70fm3hOtCtVRPqVvAFNi0daC_1iuJKcP9UuENpQ-9sNqcewVbRbh3zZkXwLh8DvukxWBroocl0sdZFHqX69i6sBqOhof8a6w7JAJdHxr0Cg4-jGfP3p3XTxIPhMGqCgXfnsuP1AMcPsOBK3AJFAxw4LLoP5ZtqX-6TKdsxvUryxoHxwvbzABoBcJDSpl2HaDzVjIFAwdTBuCDVYPYZFFs"/>
+</div>
+<div class="md:col-span-7 flex flex-col h-full justify-between py-4">
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-3xl font-headline font-light">Cashmere Shadow Coat</h3>
+<p class="text-neutral-400 text-xs uppercase tracking-widest mt-2">Italian Tailoring / Cashmere</p>
+</div>
+<button class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-end justify-between mt-12">
+<div class="flex items-center space-x-8 border-b border-neutral-200 dark:border-neutral-800 pb-2">
+<button class="text-neutral-400 hover:text-black dark:hover:text-white"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-sm tracking-widest">01</span>
+<button class="text-neutral-400 hover:text-black dark:hover:text-white"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<p class="text-2xl font-headline">$3,200.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- High-Contrast Summary Sidebar -->
+<aside class="w-full lg:w-[450px] lg:sticky lg:top-48 bg-neutral-50 dark:bg-neutral-900 p-12 lg:p-16">
+<h2 class="text-2xl font-headline font-light mb-12 uppercase tracking-[0.2em]">Overview</h2>
+<div class="space-y-6 mb-12 border-b border-neutral-200 dark:border-neutral-800 pb-12">
+<div class="flex justify-between items-center text-xs uppercase tracking-[0.2em] text-neutral-500">
+<span>Subtotal</span>
+<span class="text-black dark:text-white font-medium">$9,290.00</span>
+</div>
+<div class="flex justify-between items-center text-xs uppercase tracking-[0.2em] text-neutral-500">
+<span>Shipping</span>
+<span class="text-black dark:text-white font-medium italic">Complimentary</span>
+</div>
+<div class="flex justify-between items-center text-xs uppercase tracking-[0.2em] text-neutral-500">
+<span>Tax</span>
+<span class="text-black dark:text-white font-medium">$743.20</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline mb-16">
+<span class="text-xs uppercase tracking-[0.4em] font-light">Total</span>
+<span class="text-4xl font-headline font-light">$10,033.20</span>
+</div>
+<div class="space-y-8">
+<!-- Clean "Proceed to Checkout" Button -->
+<button class="w-full bg-black dark:bg-white text-white dark:text-black py-6 text-xs uppercase tracking-[0.3em] font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors duration-500 group relative">
+<span>Proceed to Checkout</span>
+</button>
+<div class="pt-8 space-y-4">
+<p class="text-[9px] text-neutral-400 uppercase tracking-[0.2em] leading-loose text-center">
+                        Our pieces are made to order with curated materials. Secure checkout via Atelier Global Network.
+                    </p>
+</div>
+</div>
+<!-- Promotion Code -->
+<div class="mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-neutral-200 dark:border-neutral-800 py-4 focus:ring-0 focus:border-black dark:focus:border-white text-[10px] uppercase tracking-[0.3em] transition-colors placeholder:text-neutral-300 dark:placeholder:text-neutral-700" placeholder="Promo Code" type="text"/>
+<button class="absolute right-0 bottom-4 text-[9px] font-bold uppercase tracking-widest hover:opacity-50 transition-opacity">Apply</button>
+</div>
+</div>
+<div class="mt-12 flex justify-center gap-8 text-neutral-300 dark:text-neutral-700">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="material-symbols-outlined text-sm">verified_user</span>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-neutral-50 dark:bg-neutral-950 w-full border-t border-neutral-200 dark:border-neutral-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full">
+<!-- Brand / Vertical Text -->
+<div class="flex items-center justify-center md:justify-start">
+<div class="font-['Noto_Serif'] text-6xl font-black tracking-tighter opacity-10 dark:opacity-20 vertical-text">
+                ATELIER
+            </div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col space-y-4 items-center md:items-start">
+<h4 class="font-['Work_Sans'] text-[10px] uppercase tracking-[0.3em] text-neutral-400 mb-4">Legal</h4>
+<a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-4 items-center md:items-start">
+<h4 class="font-['Work_Sans'] text-[10px] uppercase tracking-[0.3em] text-neutral-400 mb-4">Ethos</h4>
+<a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Sustainability</a>
+<a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 dark:text-neutral-400 hover:text-yellow-700 dark:hover:text-yellow-600 transition-colors hover:underline underline-offset-4" href="#">Contact</a>
+</div>
+<div class="flex flex-col justify-end items-center md:items-end">
+<div class="font-['Work_Sans'] font-normal tracking-[0.1em] text-[9px] uppercase text-neutral-400">
+                © 2024 ATELIER. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</div>
+</footer>
+</body></html>

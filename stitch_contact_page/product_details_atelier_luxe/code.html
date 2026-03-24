@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Work+Sans:wght@300;400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "on-primary": "#ffffff",
+              "surface": "#ffffff",
+              "on-surface": "#000000",
+              "outline": "#e5e5e5",
+              "surface-variant": "#f5f5f5",
+              "on-surface-variant": "#737373",
+              "accent": "#713f12", // Gold/Amber accent from Design System
+            },
+            fontFamily: {
+              "serif": ["Noto Serif", "serif"],
+              "sans": ["Work Sans", "sans-serif"],
+            },
+            letterSpacing: {
+              "extra-widest": "0.3em",
+              "widest": "0.2em",
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 20;
+      }
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Work Sans', sans-serif;
+      }
+      .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+      .luxury-shadow {
+        box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-black selection:text-white">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl flex justify-between items-center px-12 py-6 w-full max-w-none">
+<div class="font-['Noto_Serif'] text-2xl tracking-[0.3em] font-bold text-black uppercase">ATELIER</div>
+<div class="hidden lg:flex items-center space-x-12">
+<a class="text-neutral-500 hover:text-black transition-colors duration-300 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Collections</a>
+<a class="text-black border-b border-yellow-700 pb-1 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Lookbook</a>
+<a class="text-neutral-500 hover:text-black transition-colors duration-300 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Archive</a>
+<a class="text-neutral-500 hover:text-black transition-colors duration-300 font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm" href="#">Le Journal</a>
+</div>
+<div class="flex items-center space-x-8 text-black">
+<button class="hover:opacity-70 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section: Cinematic Full Screen -->
+<section class="relative w-full h-screen overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Close-up of a luxury black glass perfume bottle on a dark reflective marble surface with golden accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBT4rklFKBUpGjMnLcI5od7nKr6Mp2MJe3V51wEu1tk5Hn5FS2QOQLnZtf9J-yrUjI2m7X2562J9I4rAjLZZ_4epoL6c_MCBriZFXgRmT8fAmiZs3rY2-drO_0zoQG6fNntNUSs2mG0s2psYjD7hXpHDs40oyDqJmQi6VE39Nh8_hSSdF78y8HBpP3b_UCcZIC25v1Ys3DlptMaVVkCHYVBd2maU14Y1DpeCG4v7ZuxusJkeawBoaT1fOb8HdXHnGp-L3l2K6Qqpk"/>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute bottom-20 left-12 md:left-24 max-w-3xl text-white">
+<p class="font-sans text-xs tracking-extra-widest uppercase mb-4 opacity-80">Collection 001 — Fragrance</p>
+<h1 class="font-serif text-7xl md:text-9xl font-light italic leading-tight mb-4">Obsidian Luxe</h1>
+</div>
+</section>
+<!-- Product Details Section -->
+<section class="max-w-7xl mx-auto px-12 py-32 grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Text Details -->
+<div class="flex flex-col justify-center">
+<div class="mb-16">
+<p class="font-sans text-xs tracking-extra-widest text-neutral-400 uppercase mb-4">The Essence</p>
+<h2 class="font-serif text-5xl md:text-6xl font-light mb-6">Deep Horizon</h2>
+<p class="font-serif text-2xl italic text-accent">$450.00</p>
+</div>
+<div class="space-y-8 mb-16">
+<p class="font-serif text-lg leading-relaxed text-neutral-600 max-w-lg">
+                    A scent designed for the architectural mind. Notes of charred cedarwood merge with the cold metallic essence of midnight rain. Encased in hand-blown obsidian glass, each vessel is as unique as the shadow it casts.
+                </p>
+<div class="space-y-4 pt-8 border-t border-neutral-100 max-w-md">
+<div class="flex justify-between items-center text-xs tracking-widest uppercase text-neutral-400">
+<span>Volume</span>
+<span class="text-black">100ml / 3.4 FL OZ</span>
+</div>
+<div class="flex justify-between items-center text-xs tracking-widest uppercase text-neutral-400">
+<span>Intensity</span>
+<span class="text-black italic">High Definition</span>
+</div>
+</div>
+</div>
+<button class="group relative w-full max-w-md py-6 bg-black text-white overflow-hidden transition-all duration-500 hover:bg-neutral-800 active:scale-[0.98]">
+<span class="relative z-10 font-sans text-xs tracking-extra-widest uppercase">Add to Collection</span>
+</button>
+<div class="mt-12 flex items-center space-x-3">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+<span class="text-[10px] tracking-widest uppercase text-neutral-500">Available at Select Ateliers Worldwide</span>
+</div>
+</div>
+<!-- Secondary Imagery -->
+<div class="grid grid-cols-2 gap-6 items-start">
+<div class="space-y-6">
+<div class="aspect-[3/4] overflow-hidden bg-neutral-100">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Texture shot of dark cedarwood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxp_KZY8Gxf9OzDxIIDprbLO9ioZzoL4dKGPrA4x3kXn65WZ_sUrMG-XFTLyoY1xRMVCvexzKrCnKvwjwUhlrzTXtUUtfEB3bY_-8XcHmjLnXtChSBS4tTTg2Pxm8_YsPJwHnvUDgEXeF6CcMkm-R3w98fdxGfMnPvUZ1TcBGOyaF6InKnxZ7uiFMBBOLjRRJjTxjrkP4acKDpNRXfNbC2Hwgbd-LX6kTJSas9--fO39rRi4NAYCBkfz0cGOP7q7HR-VexoX0tP_U"/>
+</div>
+<div class="aspect-square overflow-hidden bg-neutral-100">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Liquid gold droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8kzGoKAP4fPH8GWQZjabkoU-OF7ZkaIx84s9qFU85Prl--KSw-15b8VyfL9j4rZCeRc1smHL73xFU-rrgBmcNr74RcX9YFoBYU7Jh7TZFqlwfw4Djm8Hx_Vktn71CzRaIy5FTD3CS0yjc1QRSZVfgR4as4vIrqtnpL1yS9f2X8uBwRVipeoKd8eez6yIQzM5UYtP9ZbisvksEqoLWsuBGSyxlaVdJf5RvmHYtq7iDaqLhtth1on_IhLT9OsQE9v_MSiOXMIZLxPE"/>
+</div>
+</div>
+<div class="pt-24">
+<div class="aspect-[2/3] overflow-hidden bg-neutral-100 luxury-shadow">
+<img class="w-full h-full object-cover" data-alt="Artisanal glass blower" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_pl-l3_aWZKz7I6D7mVUSuphJL1HzfpY_OKInSjI0ZqTE3HVppEjNjY8sthS8j3oallwH3K8FgHSMll9By5IebJWegmutypPQmdnMjkwviGkaw4xyWVbUvgJTtNcIpWgVEMns7PW9xKXklTTN7sgRjvxo7n9gS186BKKPi3FiP2H1ZjdCupXabCHUd2hcKK60dmd0t-C00mnvPhqj5De7IQMNn25eRpw8C0DjrMheTYvFoDpm_uhNe93iBylQFJ7Qf783wApjNJI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Craftsmanship Section -->
+<section class="py-40 bg-neutral-50 border-y border-neutral-100 overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-12 grid md:grid-cols-12 gap-20 items-center">
+<div class="md:col-span-5 relative z-10">
+<h3 class="font-serif text-5xl italic mb-10 leading-[1.2]">The Craftsmanship <br/>of Silence</h3>
+<p class="font-sans text-neutral-500 leading-loose mb-12 text-sm max-w-md">
+                    Founded in the heart of cinematic tradition, ATELIER represents more than a product—it is a study in the absence of noise. Every component is sourced from sustainable ateliers that prioritize the legacy of slow production. Our Obsidian Luxe series took three years of sensory research to perfect the equilibrium between shadow and light.
+                </p>
+<a class="group inline-flex items-center space-x-4 font-serif italic text-lg hover:opacity-70 transition-opacity" href="#">
+<span>Read the Journal</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-7">
+<div class="relative aspect-video w-full overflow-hidden bg-white">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-1000" data-alt="Studio view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_pl-l3_aWZKz7I6D7mVUSuphJL1HzfpY_OKInSjI0ZqTE3HVppEjNjY8sthS8j3oallwH3K8FgHSMll9By5IebJWegmutypPQmdnMjkwviGkaw4xyWVbUvgJTtNcIpWgVEMns7PW9xKXklTTN7sgRjvxo7n9gS186BKKPi3FiP2H1ZjdCupXabCHUd2hcKK60dmd0t-C00mnvPhqj5De7IQMNn25eRpw8C0DjrMheTYvFoDpm_uhNe93iBylQFJ7Qf783wApjNJI"/>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-20 pointer-events-none opacity-[0.03] font-serif text-[40rem] font-black">A</div>
+</section>
+<!-- Complementary Objects Section -->
+<section class="py-40 max-w-7xl mx-auto px-12">
+<div class="flex justify-between items-end mb-20">
+<div>
+<p class="font-sans text-[10px] tracking-extra-widest uppercase text-neutral-400 mb-2">Curated Pairings</p>
+<h3 class="font-serif text-4xl italic">Extend the Narrative</h3>
+</div>
+<div class="flex space-x-6">
+<button class="w-10 h-10 border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-10 h-10 border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product 1 -->
+<div class="group">
+<div class="aspect-[3/4] mb-8 overflow-hidden bg-neutral-50 luxury-shadow">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Leather vault" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8aQmn6m0EFs9hYl4hXE-McwJj0qlmFSs4lkzO35Rw90CO795KeDihRFXBVJiKTlUgz6uhDyyJVRSlhWxpqyqwOSZrgjZkpQJUkPP9A8twdDF8YgO0eAhE2ZGgUkd27SRmN16V1cUkHd4SUepBmk0uBYjx49WlDsZC0qdC5-dwsI7oQb23s4CMpLdabwZ8Vs7gK_3-y7fCiMh31x8BAqUqY3UNGJ6gZOmY1TP2xtZZTalqefPtGCjxKHPz5pfMBg4ArhBoQcM7Hrg"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-sans text-[10px] tracking-widest uppercase text-neutral-400 mb-2">Accessories</p>
+<h4 class="font-serif text-xl font-light italic mb-2">Midnight Leather Vault</h4>
+<p class="font-serif text-neutral-500">$180.00</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="aspect-[3/4] mb-8 overflow-hidden bg-neutral-50 luxury-shadow">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Carbon candle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUgL574VsUsL6D5ADdl04-cZQDa9k6v3KAf2BZOZK8FmOnUM7rrGalIHSOBnr7ypTbPRMKiNd6Qr996aNn92FUpRF2jHoz2NCw2OLhPCTB7U4CXitDQw-EHWUudhKt7q72l20uO84_D09s3DqDm1_9d7G_G6WjHv8p_ZNnYbSA018hIM1yStosJo_XWwkBobr1Y3IA7C1k82buPuOsXb5O4e-ihtqjuvbDRFf7cAoA05a9jCGk9fhwphxhfnm6vVEfrLutEmyAaF0"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-sans text-[10px] tracking-widest uppercase text-neutral-400 mb-2">Atmosphere</p>
+<h4 class="font-serif text-xl font-light italic mb-2">Carbon Candle 02</h4>
+<p class="font-serif text-neutral-500">$95.00</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="aspect-[3/4] mb-8 overflow-hidden bg-neutral-50 luxury-shadow">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Recovery serum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRBX5zZSjuvprFqdozjXeYaYjZRZ5Iwx_ZHCLyG-i9qQqSVTLC3td1hQqBZylZYY1raDdvp2-wK2ELpO2ph1FryoVY_pKoWRS3hHj-jAWOmCRSygldQWmO5iIcp_sd4oOWcyFYEamTEbDRfVbzFUt7DShZU5ARO7f76ph6_m48dS2epJErkAJPHm2F-8LQ805mud_mywPOjVviVTZ5nPttUsb_4nZDdeuXeFge_ZzpuTbneSa_ZFbRucNd3G9Msd7xyAr0Evk-flM"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-sans text-[10px] tracking-widest uppercase text-neutral-400 mb-2">Grooming</p>
+<h4 class="font-serif text-xl font-light italic mb-2">Tonal Recovery Serum</h4>
+<p class="font-serif text-neutral-500">$125.00</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full border-t border-neutral-200 bg-neutral-50">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full relative overflow-hidden">
+<div class="absolute left-0 bottom-0 pointer-events-none">
+<span class="font-['Noto_Serif'] text-6xl md:text-[10rem] font-black tracking-tighter opacity-5 vertical-text">ATELIER</span>
+</div>
+<div class="md:col-span-1 flex flex-col justify-between z-10">
+<div class="font-serif text-2xl font-bold tracking-widest">ATELIER</div>
+<p class="font-sans text-xs text-neutral-400 mt-4 leading-relaxed">Defining the space between shadow and light.</p>
+</div>
+<div class="space-y-6 z-10">
+<h5 class="font-['Work_Sans'] font-medium tracking-[0.1em] text-xs uppercase text-neutral-800">Explore</h5>
+<div class="flex flex-col space-y-3">
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Collections</a>
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Archives</a>
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Journal</a>
+</div>
+</div>
+<div class="space-y-6 z-10">
+<h5 class="font-['Work_Sans'] font-medium tracking-[0.1em] text-xs uppercase text-neutral-800">Support</h5>
+<div class="flex flex-col space-y-3">
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Sustainability</a>
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Contact</a>
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="space-y-6 z-10">
+<h5 class="font-['Work_Sans'] font-medium tracking-[0.1em] text-xs uppercase text-neutral-800">Connect</h5>
+<div class="flex flex-col space-y-3">
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">Instagram</a>
+<a class="font-['Work_Sans'] text-xs uppercase text-neutral-600 hover:text-yellow-700 hover:underline hover:underline-offset-4 transition-all" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-neutral-100 flex justify-between items-center">
+<span class="font-['Work_Sans'] font-normal tracking-[0.1em] text-[10px] uppercase text-neutral-400">© 2024 ATELIER. ALL RIGHTS RESERVED.</span>
+<div class="flex space-x-6 text-[10px] tracking-widest uppercase text-neutral-400">
+<span>Paris</span>
+<span>Tokyo</span>
+<span>New York</span>
+</div>
+</div>
+</footer>
+</body></html>

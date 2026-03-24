@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NOIR | Secure Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Inter:wght@300;400;500;600&amp;family=Bebas+Neue&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#690005",
+                        "on-secondary-container": "#b5b5b3",
+                        "on-primary-container": "#4e3700",
+                        "tertiary": "#dfc29b",
+                        "on-background": "#e2e2e2",
+                        "secondary-container": "#464746",
+                        "primary-container": "#c5a059",
+                        "surface-container": "#1f1f1f",
+                        "on-surface-variant": "#d1c5b4",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "inverse-primary": "#775a19",
+                        "error": "#ffb4ab",
+                        "primary": "#e9c176",
+                        "primary-fixed": "#ffdea5",
+                        "on-secondary": "#303130",
+                        "on-tertiary-fixed": "#281902",
+                        "secondary-fixed": "#e3e2e0",
+                        "surface-tint": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-primary": "#412d00",
+                        "on-tertiary-fixed-variant": "#574326",
+                        "on-secondary-fixed-variant": "#464746",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "tertiary-fixed": "#fcdeb5",
+                        "tertiary-container": "#bca17c",
+                        "surface-variant": "#353535",
+                        "background": "#131313",
+                        "on-tertiary": "#3f2d11",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c176",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "outline": "#9a8f80",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#4a381b",
+                        "surface-container-highest": "#353535",
+                        "inverse-on-surface": "#303030",
+                        "tertiary-fixed-dim": "#dfc29b",
+                        "surface": "#131313",
+                        "on-primary-fixed": "#261900",
+                        "inverse-surface": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "secondary": "#c7c6c4",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#4e4639",
+                        "on-surface": "#e2e2e2"
+                    },
+                    fontFamily: {
+                        "serif": ["Cormorant Garamond"],
+                        "sans": ["Inter"],
+                        "label": ["Bebas Neue"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 53, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(78, 70, 57, 0.15);
+        }
+        .neon-border-focus:focus-within {
+            border-color: #e9c176;
+            box-shadow: 0 0 8px rgba(233, 193, 118, 0.3);
+        }
+        .luxury-gradient-bg {
+            background: linear-gradient(135deg, #e9c176 0%, #c5a059 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(233, 193, 118, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-sans selection:bg-primary/30">
+<!-- Header Suppression: As per rules, TopNavBar is hidden for transactional checkout flows to focus the user -->
+<main class="min-h-screen pt-12 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Brand Anchor for Checkout -->
+<div class="flex flex-col items-center mb-16">
+<h1 class="font-serif italic text-4xl text-primary tracking-widest uppercase mb-4">NOIR</h1>
+<div class="flex items-center space-x-4 text-[10px] font-label tracking-[0.3em] text-neutral-500">
+<span class="text-primary">01 SHIPPING</span>
+<span class="w-8 h-px bg-neutral-800"></span>
+<span>02 PAYMENT</span>
+<span class="w-8 h-px bg-neutral-800"></span>
+<span>03 REVIEW</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Checkout Form Section -->
+<section class="lg:col-span-7 space-y-12">
+<div class="space-y-8">
+<h2 class="font-serif italic text-3xl text-on-background border-b border-outline-variant/20 pb-4">Shipping Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2 group">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">FIRST NAME</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="Julian" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">LAST NAME</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="Vance" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">DELIVERY ADDRESS</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="722 Fifth Avenue, Manhattan" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">CITY</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="New York" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">POSTAL CODE</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="10019" type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-8 pt-8">
+<h2 class="font-serif italic text-3xl text-on-background border-b border-outline-variant/20 pb-4">Payment Method</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<button class="glass-panel p-6 rounded flex flex-col items-center justify-center border-primary/40 group hover:bg-primary/5 transition-all duration-500">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">credit_card</span>
+<span class="text-[10px] font-label tracking-widest">CREDIT CARD</span>
+</button>
+<button class="glass-panel p-6 rounded flex flex-col items-center justify-center border-transparent opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<span class="material-symbols-outlined text-on-surface mb-2">account_balance_wallet</span>
+<span class="text-[10px] font-label tracking-widest">DIGITAL WALLET</span>
+</button>
+<button class="glass-panel p-6 rounded flex flex-col items-center justify-center border-transparent opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<span class="material-symbols-outlined text-on-surface mb-2">currency_bitcoin</span>
+<span class="text-[10px] font-label tracking-widest">CRYPTO</span>
+</button>
+</div>
+<div class="space-y-6 pt-4">
+<div class="space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">CARD NUMBER</label>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="**** **** **** 8829" type="text"/>
+<span class="absolute right-0 top-3 material-symbols-outlined text-neutral-600">lock</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">EXPIRY DATE</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="MM / YY" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-label text-neutral-400 tracking-widest">CVC</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-all duration-500 placeholder:text-neutral-700 font-serif text-lg" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-12">
+<button class="w-full luxury-gradient-bg text-on-primary py-6 px-12 font-label tracking-[0.4em] text-sm hover:scale-[1.02] active:scale-95 transition-all duration-700 shadow-[0_0_30px_rgba(233,193,118,0.2)]">
+                        AUTHORIZE TRANSACTION
+                    </button>
+<p class="text-center text-[10px] font-sans text-neutral-500 mt-6 tracking-widest">
+                        SECURE 256-BIT ENCRYPTED CONNECTION
+                    </p>
+</div>
+</section>
+<!-- Order Summary Section -->
+<aside class="lg:col-span-5 sticky top-12">
+<div class="glass-panel p-10 space-y-10 border-outline-variant/10 shadow-2xl">
+<h3 class="font-serif italic text-2xl text-primary-container">Order Summary</h3>
+<div class="space-y-8">
+<!-- Item 1 -->
+<div class="flex items-center space-x-6">
+<div class="relative w-20 h-28 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" data-alt="Close-up of a high-end luxury silk shirt with detailed stitching on a dark velvet background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGPhviknQo9cuq5uIidIP_omGkXPzNcyZ1t27mglzP-Krqp4Of3ZnA796ZC1LrjiyStCI-4PqBkWAXsrQwPkvXbOpwYM2R1mXm7kT0J8JJuKasMSbu7EZQ2Jc6Hln7Ig703J0ovTJ7jGZct_J-Ycjibug-Lstrd_N8NmUHBOxVSVMbNHDRKIOBmjpK9-OMoRVF94Tj9218Wd-A_Swz2UEF-5m4TEkMvV1Vmq8G0bxUoJvVNT_rYG2Ps5nCqD4fKNU9hOFU3XtZPyc"/>
+</div>
+<div class="flex-1">
+<h4 class="font-serif text-lg">OBSIDIAN SILK SHIRT</h4>
+<p class="text-[10px] font-label text-neutral-500 tracking-widest">COLLECTION NO. 04 / NOIR</p>
+<div class="flex justify-between items-end mt-2">
+<span class="text-[10px] text-neutral-400">QTY: 01</span>
+<span class="font-serif text-primary">$1,240.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center space-x-6">
+<div class="relative w-20 h-28 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" data-alt="Exotic black leather clutch bag with gold hardware resting on a dark marble surface with soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL18ee8TRbbdYZ1j55WTUHkJDwM7KsDvFzKYrQyYENzNHBE-001cBQtboCVp08YKdyWeTtn_cBWdwu_gQomeRIK92vS03BoFxI_TY1RedmKeAnVdVDzzbTK3qRXUBYUuVa9waQbtC3Qb69ESLSuQMbAZk6hGrqBEoJu2CDeu7C2XfulKwpXA71UERjfn54tVSnSGmsCIalODUi1l3l52P7C3W1wQK1JoJEvltfNY4LUis7AiIA1Q21t0LYXKDWq2PMf4C_UGZY4sw"/>
+</div>
+<div class="flex-1">
+<h4 class="font-serif text-lg">MIDNIGHT CLUTCH</h4>
+<p class="text-[10px] font-label text-neutral-500 tracking-widest">LIMITED EDITION / LEATHER</p>
+<div class="flex justify-between items-end mt-2">
+<span class="text-[10px] text-neutral-400">QTY: 01</span>
+<span class="font-serif text-primary">$2,850.00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4 pt-8 border-t border-outline-variant/10">
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label tracking-widest text-neutral-500">SUBTOTAL</span>
+<span class="font-serif text-on-background">$4,090.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label tracking-widest text-neutral-500">EXPRESS SHIPPING</span>
+<span class="font-serif text-on-background">COMPLIMENTARY</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label tracking-widest text-neutral-500">VAT (INCLUDED)</span>
+<span class="font-serif text-on-background">$327.20</span>
+</div>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/20">
+<span class="text-[12px] font-label tracking-[0.2em] text-primary">TOTAL DUE</span>
+<span class="font-serif text-3xl text-primary text-glow">$4,090.00</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded text-center">
+<p class="text-[10px] font-label tracking-widest text-neutral-400">PROMO CODE</p>
+<div class="flex mt-2 border-b border-outline-variant/30">
+<input class="bg-transparent text-center w-full py-2 focus:outline-none font-serif" placeholder="ENTER CODE" type="text"/>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Success Modal (Hidden by Default - Simplified for Static Design) -->
+<!-- This section represents the high-end confirmation screen pattern -->
+<div class="hidden fixed inset-0 z-[100] flex items-center justify-center p-6">
+<div class="absolute inset-0 bg-background/95 backdrop-blur-2xl"></div>
+<div class="relative glass-panel max-w-2xl w-full p-16 text-center space-y-12">
+<div class="relative inline-block">
+<div class="w-24 h-24 border border-primary rounded-full flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="absolute inset-0 border border-primary/20 rounded-full animate-ping"></div>
+</div>
+<div class="space-y-4">
+<h2 class="font-serif italic text-5xl text-primary">Transaction Confirmed</h2>
+<p class="text-neutral-400 font-sans tracking-wide max-w-sm mx-auto">Your acquisition has been verified. A concierge will contact you shortly regarding delivery orchestration.</p>
+</div>
+<div class="text-[10px] font-label tracking-[0.4em] text-neutral-500 space-y-1">
+<p>ORDER REFERENCE</p>
+<p class="text-on-background text-lg">#NR-0882-991</p>
+</div>
+<button class="inline-block border border-outline-variant/30 px-12 py-4 font-label tracking-widest text-xs hover:border-primary hover:text-primary transition-all duration-500">
+                RETURN TO ATELIER
+            </button>
+</div>
+</div>
+<footer class="w-full border-t border-white/5 pt-20 pb-10 bg-neutral-950">
+<div class="max-w-7xl mx-auto px-8 flex flex-col items-center space-y-12">
+<div class="font-serif italic text-amber-100 text-lg">NOIR</div>
+<nav class="flex space-x-12">
+<a class="text-[10px] font-sans uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Instagram</a>
+<a class="text-[10px] font-sans uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Journal</a>
+<a class="text-[10px] font-sans uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Privacy</a>
+<a class="text-[10px] font-sans uppercase tracking-[0.2em] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Contact</a>
+</nav>
+<p class="text-[10px] font-sans uppercase tracking-[0.2em] text-neutral-600">
+                © 2024 NOIR CINEMATIC. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+</body></html>

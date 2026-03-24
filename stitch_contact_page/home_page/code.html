@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#690005",
+              "on-secondary-container": "#b5b5b3",
+              "on-primary-container": "#4e3700",
+              "tertiary": "#dfc29b",
+              "on-background": "#e2e2e2",
+              "secondary-container": "#464746",
+              "primary-container": "#c5a059",
+              "surface-container": "#1f1f1f",
+              "on-surface-variant": "#d1c5b4",
+              "surface-container-high": "#2a2a2a",
+              "surface-bright": "#393939",
+              "inverse-primary": "#775a19",
+              "error": "#ffb4ab",
+              "primary": "#e9c176",
+              "primary-fixed": "#ffdea5",
+              "on-secondary": "#303130",
+              "on-tertiary-fixed": "#281902",
+              "secondary-fixed": "#e3e2e0",
+              "surface-tint": "#e9c176",
+              "on-primary-fixed-variant": "#5d4201",
+              "on-primary": "#412d00",
+              "on-tertiary-fixed-variant": "#574326",
+              "on-secondary-fixed-variant": "#464746",
+              "on-secondary-fixed": "#1b1c1b",
+              "tertiary-fixed": "#fcdeb5",
+              "tertiary-container": "#bca17c",
+              "surface-variant": "#353535",
+              "background": "#131313",
+              "on-tertiary": "#3f2d11",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#e9c176",
+              "secondary-fixed-dim": "#c7c6c4",
+              "outline": "#9a8f80",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#4a381b",
+              "surface-container-highest": "#353535",
+              "inverse-on-surface": "#303030",
+              "tertiary-fixed-dim": "#dfc29b",
+              "surface": "#131313",
+              "on-primary-fixed": "#261900",
+              "inverse-surface": "#e2e2e2",
+              "error-container": "#93000a",
+              "secondary": "#c7c6c4",
+              "surface-container-low": "#1b1b1b",
+              "surface-container-lowest": "#0e0e0e",
+              "outline-variant": "#4e4639",
+              "on-surface": "#e2e2e2"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Bebas Neue", "sans-serif"],
+              "serif": ["Noto Serif", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(53, 53, 53, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .neon-edge {
+            box-shadow: inset 0 0 1px rgba(233, 193, 118, 0.3);
+        }
+        .liquid-gold-glow:hover {
+            box-shadow: 0 0 30px rgba(233, 193, 118, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4e4639;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- Navigation Shell -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full border border-white/10 bg-neutral-900/50 backdrop-blur-xl flex justify-between items-center px-10 py-4 z-50 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="text-2xl font-serif italic text-amber-200 tracking-widest uppercase">NOIR</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-amber-200 border-b-2 border-amber-200 pb-1 font-medium font-serif italic tracking-tight hover:scale-105 hover:bg-white/5 transition-all duration-700 ease-out" href="#">Home</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors duration-500 font-serif italic tracking-tight hover:scale-105 hover:bg-white/5 transition-all duration-700 ease-out" href="#">Shop</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors duration-500 font-serif italic tracking-tight hover:scale-105 hover:bg-white/5 transition-all duration-700 ease-out" href="#">About</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors duration-500 font-serif italic tracking-tight hover:scale-105 hover:bg-white/5 transition-all duration-700 ease-out" href="#">Dashboard</a>
+</div>
+<div class="flex items-center space-x-6 text-amber-200">
+<button class="hover:scale-105 transition-transform duration-500">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:scale-105 transition-transform duration-500 relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<button class="hover:scale-105 transition-transform duration-500">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury interior" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-[2000ms] scale-105" data-alt="Cinematic shot of a high-end luxury lounge at night with deep shadows, gold lighting accents, and premium textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIP9ykhokFbPthTXjxYb_CGGCjF5WbilyZCFYmZMU3bzYYvrtiX-O6wyd4tyXg9l2a-4msQByjp1Hc2IGL6ZhzxicIQSOVZoQkiI62grZnM1mNYcFQQzYxnFOxXZTIzLvPgzZQCI3L3rF5jFLwFY6bZTIlspE3uoJyDS-lK2XWSa6TCkunKdERFU4mZDorzAO6pHo50om4EJSO4423bb-RVQ5kx8hngm0nYtY41ZHbmraLw4DT-cbcKfcqk8R-uuGej7760umcBmQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/20"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl space-y-8">
+<h2 class="text-primary font-label tracking-[0.4em] text-sm animate-pulse">ESTABLISHED MCMLXXXIV</h2>
+<h1 class="text-7xl md:text-9xl font-headline italic leading-[0.9] text-on-background tracking-tighter">
+                        The Art of <br/> <span class="text-primary ml-12 md:ml-24">Presence.</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl font-body leading-relaxed">
+                        Where liquid gold meets eternal shadow. Explore our curated collection of cinematic essentials designed for the discerning individual.
+                    </p>
+<div class="flex items-center space-x-8 pt-8">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-full font-label tracking-widest text-sm hover:scale-105 transition-all duration-500 liquid-gold-glow">
+                            EXPLORE COLLECTION
+                        </button>
+<button class="flex items-center space-x-4 group">
+<span class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary">play_arrow</span>
+</span>
+<span class="font-label tracking-widest text-xs">WATCH FILM</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 hidden md:block">
+<div class="flex flex-col items-end space-y-4">
+<div class="h-32 w-[1px] bg-gradient-to-b from-transparent via-primary/50 to-primary"></div>
+<span class="font-label tracking-[0.5em] text-[10px] rotate-180 [writing-mode:vertical-lr]">SCROLL TO DISCOVER</span>
+</div>
+</div>
+</section>
+<!-- Featured Products (Bento Grid) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="space-y-4">
+<span class="text-primary font-label tracking-widest text-xs uppercase">Curated Selects</span>
+<h3 class="text-5xl font-headline italic">The Noir Registry</h3>
+</div>
+<p class="max-w-xs text-on-surface-variant text-sm font-body leading-relaxed">
+                        Pieces that define an atmosphere. Meticulously crafted using rare materials and artisanal techniques.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[900px]">
+<!-- Large Feature -->
+<div class="md:col-span-8 group relative overflow-hidden glass-card neon-edge rounded-xl transition-all duration-700 hover:scale-[1.01]">
+<img alt="Premium product" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity duration-700" data-alt="Minimalist luxury designer watch on a dark volcanic rock surface with sharp cinematic lighting and gold reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmg6_6KJuuTJuD04r40F9wANVpZL0-0o9nGRuEKeFF7Cfd5S3CQzAv0vUPb1NyBV_E9VuSiySEd_A2A7zWK-Ms91kppIqmjFtHX5ClqsyeDBcVGTS3G2X4DaC1o0_fQMOR5uOkm8prSiXpyOYu5I2J1iMY1VWdHXlkFXdH6fnCWwV9ywF06ulnV67tTppz2WXBJMg_rlWCfJwclvNSspLaolefp1RKBGkh9Yf1ZeL1FZwspAwdryIyP2FrCbPGSjUgJFHQuAEhjY"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-background/90 to-transparent">
+<span class="text-primary font-label tracking-widest text-xs mb-2">LIMITED EDITION</span>
+<h4 class="text-4xl font-headline italic mb-4">Obsidian Chronograph</h4>
+<p class="text-on-surface-variant max-w-sm mb-8">Swiss movement encased in carbon-treated titanium. A silent statement of precision.</p>
+<button class="w-fit text-primary font-label tracking-widest text-sm border-b border-primary/30 pb-1 hover:border-primary transition-all">VIEW DETAILS</button>
+</div>
+</div>
+<!-- Side Grid Items -->
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="group relative overflow-hidden glass-card neon-edge rounded-xl transition-all duration-700 hover:scale-[1.01]">
+<img alt="Luxury scent" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-700" data-alt="High-end perfume bottle with gold cap on a dark mirrored surface with elegant smoke swirls in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-x0KdHra3o-omg_r_pAJ_ClWAtTiALeV21ZQu4edNIyDIZKcgeenaAyMlc2vQkUFtd6b_C2IMx482U-yMYLQJwRD71FQSC8SPG7dhHPyXiZq89LrqfYzfjnDO3ow_cRg3t7DVmqJ2cVB-nNXLYIXban-W62drBNd788OZFrkfUpOIx7o35aAmbyW-cQOOT1xAQNJyf35yC5oxFmd-zuQixBYIV4mVKci9hIvYJvxKYE8nAlKgDSl9ZdgG0niXdJ-KAaqGB7wgcHs"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/80 to-transparent">
+<h4 class="text-2xl font-headline italic mb-2">Midnight Scent No. 4</h4>
+<span class="text-primary font-label tracking-widest text-xs">$240.00</span>
+</div>
+</div>
+<div class="group relative overflow-hidden glass-card neon-edge rounded-xl transition-all duration-700 hover:scale-[1.01]">
+<img alt="Designer leather" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-700" data-alt="Close-up of premium black leather bag texture with intricate gold stitching and hardware in moody lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmjTnJtllAkM6UazhOw3_aynIaeYyeeh8_QRt43i3zw1ySacKgqVOmErZcDU1fhJkszls1Yso_GG-6Mr6fOSIDM_gTB0362V-LZLttTw09VsyBtA4siYZH4TpsxQBLaL3xfzYRubEakK06c0Jhyktvmm1E_gRz2JeSk1Dwqog0RD21oLYrUS8fK9oHZTnn__pA9Co9hpdGzf4ijnJJmRoTK-iCyUvNt2lEZopx4mkoXGsNv5DrACPqDQcxsvng6sZWbb1mtCZWtrw"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/80 to-transparent">
+<h4 class="text-2xl font-headline italic mb-2">Architect Folio</h4>
+<span class="text-primary font-label tracking-widest text-xs">$890.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Philosophy / Narrative -->
+<section class="py-40 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="absolute -top-20 -left-20 text-[20rem] font-headline italic text-white/[0.02] select-none pointer-events-none">NOIR</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-[4/5] overflow-hidden rounded-lg">
+<img alt="Artisan process" class="w-full h-full object-cover" data-alt="An artisan's hands working with molten glass in a dark studio, glowing orange light against deep black shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE25QZMzbQuZgUd4NNM7OP8u6PktiSo7Z5BOKXyI_cLEdlgQjyEyeUeInIoJUJIR08oK_AEmIG0CQbO0KH_z5awH_PVaIasYtS_9Jjcr7rU9ZZ4he9r4iK1ZdnvuAlNqolbM6oD_S57IIOXbPmrYtgtKbWU8TJ0fzJ1UZ0TNx8pm-kZowXNiO8lYfEtIXbhIGfbayaIRBZ46OBzBWZ_8LPYTuJBdEIpwjYWLjQjnepnx-WZDkdkfjvLN0cMApJgTtuB7KJYQBJ8ns"/>
+</div>
+<div class="absolute -bottom-10 -right-10 glass-card p-8 neon-edge hidden md:block">
+<p class="font-headline italic text-2xl text-primary">"Beauty is found in <br/> the absence of light."</p>
+</div>
+</div>
+<div class="space-y-12 order-1 md:order-2">
+<div class="space-y-4">
+<span class="text-primary font-label tracking-widest text-xs uppercase">The Philosophy</span>
+<h3 class="text-6xl font-headline italic leading-tight">Mastering the <br/> Cinema of Life.</h3>
+</div>
+<div class="space-y-6 text-on-surface-variant font-body leading-loose text-lg">
+<p>We believe that luxury isn't about being noticed; it's about being remembered. Our design language speaks in whispers, utilizing the highest tier of tonal depth and negative space to frame what truly matters.</p>
+<p>Every NOIR piece undergoes a rigorous curation process, ensuring that only objects with a soul make it to your collection. We don't follow trends; we create legacies.</p>
+</div>
+<div class="pt-8 grid grid-cols-2 gap-8 border-t border-outline-variant/30">
+<div>
+<h5 class="text-on-background font-label tracking-widest mb-2 text-sm">CRAFTMANSHIP</h5>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">100% Hand-finished materials</p>
+</div>
+<div>
+<h5 class="text-on-background font-label tracking-widest mb-2 text-sm">EXCLUSIVITY</h5>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Small batch production</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Subscription -->
+<section class="py-32 border-t border-white/5">
+<div class="max-w-3xl mx-auto px-8 text-center space-y-12">
+<div class="space-y-4">
+<h3 class="text-5xl font-headline italic">Join the Inner Circle.</h3>
+<p class="text-on-surface-variant font-body">Subscribers receive private access to seasonal drops and cinematic events.</p>
+</div>
+<div class="relative group">
+<input class="w-full bg-transparent border-b border-outline-variant py-6 text-on-background font-label tracking-widest focus:outline-none focus:border-primary transition-all text-center" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="mt-8 text-primary font-label tracking-[0.3em] text-xs hover:text-white transition-colors duration-500">SUBSCRIBE NOW</button>
+<div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-focus-within:w-full transition-all duration-1000"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/5 pt-20 pb-10 bg-neutral-950">
+<div class="max-w-7xl mx-auto px-8 flex flex-col items-center space-y-12">
+<div class="text-lg font-serif italic text-amber-100 uppercase tracking-[0.3em]">NOIR CINEMATIC</div>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Instagram</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Journal</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Privacy</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<div class="text-center space-y-4">
+<p class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500">© 2024 NOIR CINEMATIC. ALL RIGHTS RESERVED.</p>
+<div class="flex justify-center space-x-4 opacity-30 grayscale contrast-150">
+<img alt="Partner Logo" class="h-6" data-alt="Abstract minimalist company logo in monochrome white on transparent background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0_G9hBzemls1SHeZqpueillRjr6QcvLkuGyBPpt41LSvQVO-aiB7uUitM1KV3nU1EcChwIHAqxTTjks76W53yfA9WMRZJTMxp9mq07QR2LVApwFPtFSm3urTQ9gOsdzsP-tg9xv4ZzliYDtwTPUrWyO6jxzq6Rs5p0Cy4JkZMfFn8r5z-Ma9V0J6dFt8e74egYWfuQXheoKa2fsjJ36S_KH4uAGqn_ZtuMgi3e9WmfxFdJ-YmAZGpwRkD-EZ-aHRFI190Pr5jkv8"/>
+<img alt="Partner Logo" class="h-6" data-alt="Geometric minimalist vector brand mark for a luxury firm in clean white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTMhVHjC8pf75Swvc0z3OIFTpfDJDrycEpt3aXhAdp_TL9Yjrm_ZWTR7OfRK6YbckeDfkwiWagI3aNYVvWLrEOaxV8JIqh0U67tFXxVkKteJzmxIvjTGgOUwxihPMfRRJjTjokUjc6j2ufqNHnIWR6tD7fu_EgibT-bF2mEMHwLSXFxY_rvHWpHyG_XebKwWUdz6HCy0BexNuOPoTqGxU2HjDul697e5WYaDibbsrLQjlZBC9w5lvDSn_BJcfihPgnW0puxHZRlAQ"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

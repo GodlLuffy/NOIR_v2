@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NOIR | Executive Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Inter:wght@300;400;500;600&amp;family=Bebas+Neue&amp;family=Manrope:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e2e2e2;
+        }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        .font-accent { font-family: 'Bebas Neue', cursive; }
+        .font-label { font-family: 'Manrope', sans-serif; }
+        
+        .glass-panel {
+            background: rgba(53, 53, 53, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(78, 70, 57, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#690005",
+              "on-secondary-container": "#b5b5b3",
+              "on-primary-container": "#4e3700",
+              "tertiary": "#dfc29b",
+              "on-background": "#e2e2e2",
+              "secondary-container": "#464746",
+              "primary-container": "#c5a059",
+              "surface-container": "#1f1f1f",
+              "on-surface-variant": "#d1c5b4",
+              "surface-container-high": "#2a2a2a",
+              "surface-bright": "#393939",
+              "inverse-primary": "#775a19",
+              "error": "#ffb4ab",
+              "primary": "#e9c176",
+              "primary-fixed": "#ffdea5",
+              "on-secondary": "#303130",
+              "on-tertiary-fixed": "#281902",
+              "secondary-fixed": "#e3e2e0",
+              "surface-tint": "#e9c176",
+              "on-primary-fixed-variant": "#5d4201",
+              "on-primary": "#412d00",
+              "on-tertiary-fixed-variant": "#574326",
+              "on-secondary-fixed-variant": "#464746",
+              "on-secondary-fixed": "#1b1c1b",
+              "tertiary-fixed": "#fcdeb5",
+              "tertiary-container": "#bca17c",
+              "surface-variant": "#353535",
+              "background": "#131313",
+              "on-tertiary": "#3f2d11",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#e9c176",
+              "secondary-fixed-dim": "#c7c6c4",
+              "outline": "#9a8f80",
+              "surface-dim": "#131313",
+              "on-tertiary-container": "#4a381b",
+              "surface-container-highest": "#353535",
+              "inverse-on-surface": "#303030",
+              "tertiary-fixed-dim": "#dfc29b",
+              "surface": "#131313",
+              "on-primary-fixed": "#261900",
+              "inverse-surface": "#e2e2e2",
+              "error-container": "#93000a",
+              "secondary": "#c7c6c4",
+              "surface-container-low": "#1b1b1b",
+              "surface-container-lowest": "#0e0e0e",
+              "outline-variant": "#4e4639",
+              "on-surface": "#e2e2e2"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond"],
+              "body": ["Inter"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full border border-white/10 bg-neutral-900/50 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex justify-between items-center px-10 py-4 z-50">
+<div class="text-2xl font-serif italic text-amber-200 tracking-widest uppercase">NOIR</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-accent uppercase tracking-widest text-neutral-400 hover:text-neutral-200 transition-colors duration-500" href="#">Home</a>
+<a class="font-accent uppercase tracking-widest text-neutral-400 hover:text-neutral-200 transition-colors duration-500" href="#">Shop</a>
+<a class="font-accent uppercase tracking-widest text-neutral-400 hover:text-neutral-200 transition-colors duration-500" href="#">About</a>
+<a class="font-accent uppercase tracking-widest text-amber-200 border-b-2 border-amber-200 pb-1 font-medium" href="#">Dashboard</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-amber-200 hover:scale-105 transition-all duration-700 ease-out" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined text-amber-200 hover:scale-105 transition-all duration-700 ease-out" data-icon="account_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_circle</button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-serif italic text-5xl md:text-7xl text-primary tracking-tight leading-none mb-4">Executive Oversight</h1>
+<p class="font-label uppercase tracking-[0.3em] text-xs text-outline">Merchant ID: NX-9421 // Cinematic Standards Bureau</p>
+</header>
+<!-- Analytics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<!-- Card: Total Products -->
+<div class="md:col-span-1 glass-panel p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-variant transition-all duration-500">
+<div>
+<span class="material-symbols-outlined text-primary mb-6" data-icon="inventory_2">inventory_2</span>
+<h3 class="font-accent text-lg tracking-widest text-on-surface-variant">Total Products</h3>
+</div>
+<div class="mt-8">
+<span class="text-5xl font-serif text-primary">1,248</span>
+<p class="text-[10px] font-label text-outline mt-2">+12 Since last login</p>
+</div>
+</div>
+<!-- Card: Orders -->
+<div class="md:col-span-2 glass-panel p-8 rounded-xl flex flex-col justify-between relative overflow-hidden">
+<div class="z-10">
+<span class="material-symbols-outlined text-primary mb-6" data-icon="monitoring">monitoring</span>
+<h3 class="font-accent text-lg tracking-widest text-on-surface-variant">Revenue Velocity</h3>
+<div class="mt-6 flex items-baseline space-x-4">
+<span class="text-6xl font-serif text-on-surface">€84,200</span>
+<span class="text-primary text-sm font-label flex items-center">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="trending_up">trending_up</span> 14%
+                        </span>
+</div>
+</div>
+<!-- Visual Decoration -->
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full stroke-primary fill-none" viewbox="0 0 100 100">
+<path d="M0 80 Q 25 70 40 40 T 80 20 T 100 10" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card: Low Stock Alerts -->
+<div class="md:col-span-1 glass-panel p-8 rounded-xl border-error/20 bg-error-container/5">
+<span class="material-symbols-outlined text-error mb-6" data-icon="notification_important">notification_important</span>
+<h3 class="font-accent text-lg tracking-widest text-error">Stock Alerts</h3>
+<div class="mt-6 space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="text-xs font-label uppercase">Nocturne Eau</span>
+<span class="text-xs font-bold text-error">3 Left</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="text-xs font-label uppercase">Shadow Silk Tie</span>
+<span class="text-xs font-bold text-error">1 Left</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs font-label uppercase">Onyx Cufflinks</span>
+<span class="text-xs font-bold text-error">4 Left</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area: Asymmetric Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Add New Product Form (The "Creation" Column) -->
+<aside class="lg:col-span-1">
+<div class="glass-panel p-10 rounded-xl sticky top-32">
+<h2 class="font-serif italic text-3xl text-on-surface mb-8">Curate New Asset</h2>
+<form class="space-y-8">
+<div class="space-y-1">
+<label class="font-label uppercase tracking-widest text-[10px] text-outline">Asset Designation</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder:text-neutral-700 transition-all py-2" placeholder="e.g. Midnight Cashmere Overcoat" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label uppercase tracking-widest text-[10px] text-outline">Valuation (€)</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder:text-neutral-700 transition-all py-2" placeholder="2,400" type="number"/>
+</div>
+<div class="space-y-1">
+<label class="font-label uppercase tracking-widest text-[10px] text-outline">Initial Supply</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder:text-neutral-700 transition-all py-2" placeholder="24" type="number"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label uppercase tracking-widest text-[10px] text-outline">Narrative Description</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder:text-neutral-700 transition-all py-2 resize-none" placeholder="Crafted for the shadows..." rows="3"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 font-accent tracking-[0.2em] uppercase hover:shadow-[0_0_20px_rgba(233,193,118,0.3)] transition-all duration-500 rounded" type="button">
+                                Confirm Curated Asset
+                            </button>
+</div>
+</form>
+</div>
+</aside>
+<!-- Order Management (The "Activity" Column) -->
+<div class="lg:col-span-2 space-y-8">
+<div class="flex justify-between items-end">
+<h2 class="font-serif italic text-4xl text-on-surface">Recent Acquisitions</h2>
+<button class="font-label uppercase text-[10px] tracking-widest text-primary border-b border-primary pb-1">Archive History</button>
+</div>
+<div class="space-y-4">
+<!-- Order Item 1 -->
+<div class="glass-panel group p-6 rounded-lg flex items-center justify-between hover:translate-x-2 transition-all duration-500">
+<div class="flex items-center space-x-6">
+<div class="w-16 h-20 bg-neutral-800 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="close-up of a high-end luxury watch on a dark velvet surface with moody dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6wLsqnFpfIJB3cFnl4YmhG9ApaCGHFLuyzCovRg7_uEsxUHuc-Bbmh7VVpfyaHFwmsBsMGCC0iqPD4P6BXIODKFuOLL1VaGY0eLzS40Aq6hB2zlwd7O2u0PeJGDxCEUQI2dRNGfLiwJmzcONfkVBbXREQCu68UDso0LcPe2dOq-0I8awG02afnNj2fswLyWUgojds7dCDCGrjC6pmHt4_ZThkj3M31BLRbwbP9yQ6lJ47_Jf868f3vXhhMbkXk8AlEWVdWdz_Rp0"/>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline tracking-widest">ORD-88219</p>
+<h4 class="font-serif text-xl text-on-surface">Obsidian Timepiece No. 4</h4>
+<p class="text-xs text-neutral-500">Acquired by Julian Vane • Milan, IT</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-serif text-xl text-primary">€4,250</p>
+<span class="inline-block mt-2 px-3 py-1 bg-primary/10 text-primary text-[9px] font-accent tracking-widest uppercase rounded-full">Dispatched</span>
+</div>
+</div>
+<!-- Order Item 2 -->
+<div class="glass-panel group p-6 rounded-lg flex items-center justify-between hover:translate-x-2 transition-all duration-500">
+<div class="flex items-center space-x-6">
+<div class="w-16 h-20 bg-neutral-800 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="minimalist photography of a premium black leather handbag against a dark stone background with soft highlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBeAp0ALHuESpKJzA22Uo6WJ0XJ_WTCnqkDDYkhZLRBvqpd-xubyprrCv_ETixAY3gpRO1ER42IWEm5LUF8H0ERHHlmf3m0cF9CvOsuPDEoHwSbQ4pRPyaarfVrksOOtCaNpnguttFxnci4_0L30v1UBSEvQE-mHg0UNFE2AIASf8lThYGqnZ-dzq8jgOEfhGk5eXOvLLIPAACyKYCgqBxVT7BXjUM4EI4HMhKHeu-40_dkHQ8ZL6wKersNHSw5Zvx35OjkQak0Nw"/>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline tracking-widest">ORD-88220</p>
+<h4 class="font-serif text-xl text-on-surface">Minimalist Maestra Bag</h4>
+<p class="text-xs text-neutral-500">Acquired by Elena Thorne • Paris, FR</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-serif text-xl text-primary">€1,800</p>
+<span class="inline-block mt-2 px-3 py-1 bg-surface-variant text-outline text-[9px] font-accent tracking-widest uppercase rounded-full">Processing</span>
+</div>
+</div>
+<!-- Order Item 3 -->
+<div class="glass-panel group p-6 rounded-lg flex items-center justify-between hover:translate-x-2 transition-all duration-500">
+<div class="flex items-center space-x-6">
+<div class="w-16 h-20 bg-neutral-800 rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="textured close up of a luxury charcoal wool blazer lapel with elegant button detail in cinematic dim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkDFiVdx6iBsl6GJxrSnr0nkl5ufx_KdW2B2_fphe2OEjJ9chx3wSzyia16n76wvT43btJ8EN0Q4SpmRzV1XvjGUyAEHmO7G2yesyRrBimPEEa5fgZLjcHk8JvnmNB3DmZ7p6z324zZ2DWmn8dgkFk8OitulHwS7cUkdr5jOIUBFUkmgWQNUYMvkLmdrf9FZ9vizII-4AjV34XLriyww-enaMndFh3gkgpFrRgFn3kPUfvcHsM-pwYmRSH2g88d0nC7d6oaoNtres"/>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline tracking-widest">ORD-88221</p>
+<h4 class="font-serif text-xl text-on-surface">Anthracite Peak Lapel Suit</h4>
+<p class="text-xs text-neutral-500">Acquired by Marcus Webb • London, UK</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-serif text-xl text-primary">€3,100</p>
+<span class="inline-block mt-2 px-3 py-1 bg-primary/10 text-primary text-[9px] font-accent tracking-widest uppercase rounded-full">Dispatched</span>
+</div>
+</div>
+</div>
+<!-- Bento Secondary: Inventory Heatmap -->
+<div class="glass-panel p-8 rounded-xl h-64 relative overflow-hidden flex items-end">
+<div class="absolute top-8 left-8">
+<h3 class="font-accent text-lg tracking-widest text-on-surface-variant mb-2">Inventory Geographic Reach</h3>
+<p class="font-label text-[10px] text-outline uppercase tracking-widest">Active nodes across 14 territories</p>
+</div>
+<div class="w-full grid grid-cols-12 gap-1 items-end">
+<div class="h-12 bg-primary/20 rounded-t"></div>
+<div class="h-24 bg-primary/40 rounded-t"></div>
+<div class="h-16 bg-primary/20 rounded-t"></div>
+<div class="h-32 bg-primary/60 rounded-t"></div>
+<div class="h-40 bg-primary/80 rounded-t shadow-[0_0_15px_rgba(233,193,118,0.2)]"></div>
+<div class="h-28 bg-primary/40 rounded-t"></div>
+<div class="h-14 bg-primary/20 rounded-t"></div>
+<div class="h-20 bg-primary/30 rounded-t"></div>
+<div class="h-36 bg-primary/70 rounded-t"></div>
+<div class="h-44 bg-primary rounded-t shadow-[0_0_20px_rgba(233,193,118,0.4)]"></div>
+<div class="h-22 bg-primary/40 rounded-t"></div>
+<div class="h-12 bg-primary/10 rounded-t"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-white/5 pt-20 pb-10 bg-neutral-950">
+<div class="max-w-7xl mx-auto px-8 flex flex-col items-center space-y-12">
+<div class="text-lg font-serif italic text-amber-100">NOIR CINEMATIC</div>
+<div class="flex space-x-12">
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Instagram</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Journal</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Privacy</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<div class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500">
+                © 2024 NOIR CINEMATIC. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

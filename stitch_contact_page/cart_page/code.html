@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NOIR | LUXURY CART</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Bebas+Neue&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Inter', sans-serif;
+        }
+        .serif-headline { font-family: 'Noto Serif', serif; }
+        .accent-label { font-family: 'Bebas Neue', sans-serif; }
+        .glass-panel {
+            background: rgba(53, 53, 53, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 30px rgba(233, 193, 118, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#690005",
+                        "on-secondary-container": "#b5b5b3",
+                        "on-primary-container": "#4e3700",
+                        "tertiary": "#dfc29b",
+                        "on-background": "#e2e2e2",
+                        "secondary-container": "#464746",
+                        "primary-container": "#c5a059",
+                        "surface-container": "#1f1f1f",
+                        "on-surface-variant": "#d1c5b4",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "inverse-primary": "#775a19",
+                        "error": "#ffb4ab",
+                        "primary": "#e9c176",
+                        "primary-fixed": "#ffdea5",
+                        "on-secondary": "#303130",
+                        "on-tertiary-fixed": "#281902",
+                        "secondary-fixed": "#e3e2e0",
+                        "surface-tint": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-primary": "#412d00",
+                        "on-tertiary-fixed-variant": "#574326",
+                        "on-secondary-fixed-variant": "#464746",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "tertiary-fixed": "#fcdeb5",
+                        "tertiary-container": "#bca17c",
+                        "surface-variant": "#353535",
+                        "background": "#131313",
+                        "on-tertiary": "#3f2d11",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c176",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "outline": "#9a8f80",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#4a381b",
+                        "surface-container-highest": "#353535",
+                        "inverse-on-surface": "#303030",
+                        "tertiary-fixed-dim": "#dfc29b",
+                        "surface": "#131313",
+                        "on-primary-fixed": "#261900",
+                        "inverse-surface": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "secondary": "#c7c6c4",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#4e4639",
+                        "on-surface": "#e2e2e2"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full border border-white/10 bg-neutral-900/50 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex justify-between items-center px-10 py-4 z-50">
+<div class="text-2xl font-serif italic text-amber-200 tracking-widest uppercase">NOIR</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors duration-500 font-sans uppercase tracking-[0.2em] text-[11px]" href="#">Home</a>
+<a class="text-amber-200 border-b-2 border-amber-200 pb-1 font-medium font-sans uppercase tracking-[0.2em] text-[11px]" href="#">Shop</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors duration-500 font-sans uppercase tracking-[0.2em] text-[11px]" href="#">About</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors duration-500 font-sans uppercase tracking-[0.2em] text-[11px]" href="#">Dashboard</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-amber-200 hover:scale-105 transition-all duration-700 ease-out relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
+</button>
+<button class="text-amber-200 hover:scale-105 transition-all duration-700 ease-out">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+<main class="pt-40 pb-32 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-start">
+<!-- Cart Items Container -->
+<div class="flex-1 w-full">
+<div class="mb-12">
+<h1 class="text-5xl md:text-7xl font-headline italic tracking-tighter mb-4">Your Selection</h1>
+<p class="text-neutral-500 font-label tracking-widest uppercase text-xs">3 Masterpieces curated for your collection</p>
+</div>
+<div class="space-y-12">
+<!-- Item 1 -->
+<div class="group relative flex flex-col md:flex-row items-center gap-8 pb-12 border-b border-outline-variant/10">
+<div class="w-full md:w-48 h-64 overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Close-up of a premium leather sneaker with minimal branding in a dark cinematic studio setting with golden rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXkaCABsxQ2D-G-viIXawoi6yjVARdBOHWDlvAHzTZNkIeuAXxn3VNdfvIG2D4XmUwmoRo75qeXGvsB6LoLOvCQ7kIHLmQAdQbpWr4Ca2mO57o2qLjQyEgAB3_kA9ZbZnJ4f0MuClbSYIxYizPhMLLD-PmR3q2pzXu1qfZL4OFFNUlywh1egvgGkOV3DSvUBjjiWjP0wQPiLpDUOut8G2QU2OXGf1qMrOHBMI-2jVGkUgPN_gTqJtbFrPpoNfU1h_Ezifj9eKqx9U"/>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-headline font-light text-on-background">Midnight Velvet Sneaker</h3>
+<p class="text-outline text-sm uppercase tracking-widest">Handcrafted / Noir Collection</p>
+</div>
+<button class="text-outline hover:text-error transition-colors duration-300">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-4">
+<div class="flex items-center border border-outline-variant/20 rounded-full px-4 py-2 gap-6 bg-surface-container-lowest/50">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-on-background font-label text-sm">01</span>
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<p class="text-xl font-headline italic text-primary">$1,240.00</p>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative flex flex-col md:flex-row items-center gap-8 pb-12 border-b border-outline-variant/10">
+<div class="w-full md:w-48 h-64 overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Luxury minimalist watch on dark silk background with soft golden highlights reflecting off the glass surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAanD6qvH_H-Agm7g9Ton6N-89XBnhVXJ1aNnbXk66Xi_bdzbtfhGtu-obazWrN4NtJHUGUBEWzpm-DpOWqOY9KT5hhLaFIVb-QSpu30I7HHPkTi2Gbs6Ifi-9CFb6ZMl2tvOBvUnNa2-ATwyBY_z7wttO0mxPz2Wv5zNFkLP5t7o7l_vhm1FQrAoZkXBsRaP-gqHe1z0oNuL0sSMXoNezS3ytwiBCaFMEsQfH389Z5dUHN1GBxtpM3qD1Tgh7t29MFNFG7jCvE498"/>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-headline font-light text-on-background">Obsidian Chronograph</h3>
+<p class="text-outline text-sm uppercase tracking-widest">Limited Edition / Swiss Movement</p>
+</div>
+<button class="text-outline hover:text-error transition-colors duration-300">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-4">
+<div class="flex items-center border border-outline-variant/20 rounded-full px-4 py-2 gap-6 bg-surface-container-lowest/50">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-on-background font-label text-sm">01</span>
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<p class="text-xl font-headline italic text-primary">$4,850.00</p>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative flex flex-col md:flex-row items-center gap-8 pb-12 border-b border-outline-variant/10">
+<div class="w-full md:w-48 h-64 overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Designer black shirt on a wooden minimalist rack in a moody atmospheric boutique setting with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvotiTa-aecLI8gz2fAubgwp13C-tDY6Zk7AX54x2T2tY2NJLprLQFoA70fm3hOtCtVRPqVvAFNi0daC_1iuJKcP9UuENpQ-9sNqcewVbRbh3zZkXwLh8DvukxWBroocl0sdZFHqX69i6sBqOhof8a6w7JAJdHxr0Cg4-jGfP3p3XTxIPhMGqCgXfnsuP1AMcPsOBK3AJFAxw4LLoP5ZtqX-6TKdsxvUryxoHxwvbzABoBcJDSpl2HaDzVjIFAwdTBuCDVYPYZFFs"/>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-headline font-light text-on-background">Cashmere Shadow Coat</h3>
+<p class="text-outline text-sm uppercase tracking-widest">Italian Fabric / tailored fit</p>
+</div>
+<button class="text-outline hover:text-error transition-colors duration-300">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-4">
+<div class="flex items-center border border-outline-variant/20 rounded-full px-4 py-2 gap-6 bg-surface-container-lowest/50">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-on-background font-label text-sm">01</span>
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<p class="text-xl font-headline italic text-primary">$3,200.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Checkout Sidebar -->
+<aside class="w-full lg:w-[400px] sticky top-40">
+<div class="glass-panel rounded-2xl p-10 space-y-10 border border-white/5 shadow-2xl">
+<div class="space-y-6">
+<h2 class="text-3xl font-headline italic text-on-background">Summary</h2>
+<div class="space-y-4 pt-4 border-t border-outline-variant/10">
+<div class="flex justify-between items-center text-sm font-label uppercase tracking-widest text-outline">
+<span>Subtotal</span>
+<span class="text-on-background">$9,290.00</span>
+</div>
+<div class="flex justify-between items-center text-sm font-label uppercase tracking-widest text-outline">
+<span>Shipping</span>
+<span class="text-on-background text-[10px] tracking-tighter bg-surface-container-high px-2 py-0.5 rounded">Complimentary</span>
+</div>
+<div class="flex justify-between items-center text-sm font-label uppercase tracking-widest text-outline">
+<span>Tax Estimate</span>
+<span class="text-on-background">$743.20</span>
+</div>
+</div>
+<div class="flex justify-between items-end pt-8 border-t border-primary/20">
+<span class="text-lg font-headline italic">Total Amount</span>
+<span class="text-3xl font-headline text-primary">$10,033.20</span>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label uppercase tracking-[0.2em] text-xs font-bold rounded-full transition-all duration-700 hover:scale-[1.02] gold-glow relative overflow-hidden group">
+<span class="relative z-10">Proceed to Checkout</span>
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-700"></div>
+</button>
+<p class="text-center text-[10px] text-outline uppercase tracking-widest">Secure payment guaranteed</p>
+</div>
+<div class="pt-6 space-y-4">
+<label class="block text-[10px] font-label uppercase tracking-widest text-outline">Promotion Code</label>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline-variant/30 py-2 focus:border-primary focus:ring-0 text-sm font-label tracking-widest uppercase transition-all duration-500 placeholder:text-outline-variant/50" placeholder="ENTER CODE" type="text"/>
+<button class="absolute right-0 bottom-2 text-primary text-[10px] font-bold uppercase tracking-widest hover:text-primary-container transition-colors">Apply</button>
+</div>
+</div>
+<div class="pt-6 flex gap-4 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000">
+<span class="material-symbols-outlined">payments</span>
+<span class="material-symbols-outlined">lock</span>
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+</div>
+<div class="mt-8 px-6">
+<p class="text-[10px] leading-relaxed text-outline uppercase tracking-[0.1em]">
+                        Each NOIR piece is hand-selected and verified for cinematic quality. Please note that shipping times for limited editions may vary due to custom handling requirements.
+                    </p>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 mt-20">
+<div class="max-w-7xl mx-auto px-8 flex flex-col items-center space-y-12">
+<div class="text-lg font-serif italic text-amber-100">NOIR</div>
+<div class="flex space-x-12">
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Instagram</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Journal</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Privacy</a>
+<a class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" href="#">Contact</a>
+</div>
+<div class="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500">
+                © 2024 NOIR CINEMATIC. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

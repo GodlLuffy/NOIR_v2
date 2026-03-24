@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "on-primary": "#ffffff",
+              "background": "#ffffff",
+              "on-background": "#000000",
+              "surface": "#ffffff",
+              "on-surface": "#000000",
+              "outline": "#e5e5e5",
+              "accent": "#a16207" // Refined subtle gold/brass
+            },
+            fontFamily: {
+              "serif": ["Noto Serif", "serif"],
+              "sans": ["Work Sans", "sans-serif"],
+              "body": ["Work Sans", "sans-serif"],
+              "headline": ["Noto Serif", "serif"]
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+        }
+        ::selection {
+            background: #000000;
+            color: #ffffff;
+        }
+        .zoom-hover:hover img {
+            transform: scale(1.05);
+        }
+        .letter-spacing-widest {
+            letter-spacing: 0.3em;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary antialiased">
+<!-- TopNavBar Component Integration -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-100 flex justify-between items-center px-12 py-6">
+<div class="font-['Noto_Serif'] text-2xl tracking-[0.3em] font-bold text-black uppercase">ATELIER</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm text-black border-b border-accent pb-1" href="#">Collections</a>
+<a class="font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm text-neutral-500 hover:text-black transition-colors duration-300" href="#">Lookbook</a>
+<a class="font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm text-neutral-500 hover:text-black transition-colors duration-300" href="#">Archive</a>
+<a class="font-['Noto_Serif'] font-light tracking-[0.2em] uppercase text-sm text-neutral-500 hover:text-black transition-colors duration-300" href="#">Le Journal</a>
+</div>
+<div class="flex items-center space-x-6 text-black">
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-accent text-white text-[8px] font-bold w-3 h-3 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section: Editorial High-Impact -->
+<section class="relative h-screen min-h-[800px] w-full flex items-center overflow-hidden bg-neutral-50">
+<div class="absolute inset-0 z-0 flex">
+<div class="w-1/2 h-full bg-neutral-100 overflow-hidden">
+<img alt="High-end fashion photography" class="w-full h-full object-cover transition-transform duration-[3000ms] ease-out scale-110 hover:scale-100" data-alt="Black and white high-fashion editorial shot of a model draped in premium textured fabrics with stark architectural shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD09v2kiT55nqla26yKhgjg4jddUJil_VtU00qB6Cg1pc0t1V_VK9Gf2AQaseUop7oP4aeipHcno3Z8dRM8YG39U9PdBBTR6YpCYSS5DW7iHWmeBv6aQjrvoD-2QDNlYLwUZH8YHpJo8fRcgWiI4JtvaDUhakBChtesl21QI03qPFY0Dkd_uNIEU8gzvtUpcGnpGt1YfYTFsCulRli6cw6wRrudwu2LmDsD7GwV61OTcsphJrW1Iohbvlhvgb8PliKS1FuMzep6e0s"/>
+</div>
+<div class="w-1/2 h-full bg-white flex items-center justify-center px-24">
+<!-- Text container in the white space -->
+</div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-12 grid grid-cols-2">
+<div class="invisible">Spacer</div>
+<div class="pl-12">
+<div class="max-w-xl space-y-12">
+<div class="space-y-4">
+<h2 class="text-accent font-sans tracking-[0.5em] text-xs font-semibold uppercase">ESTABLISHED MCMLXXXIV</h2>
+<h1 class="text-7xl md:text-8xl font-headline font-light leading-[1.1] tracking-tighter italic">
+                                The Art of <br/> Presence.
+                            </h1>
+</div>
+<p class="text-neutral-600 text-lg md:text-xl font-light leading-relaxed max-w-md">
+                            A dialogue between shadow and form. Curated essentials designed for the discerning individual.
+                        </p>
+<div class="flex items-center space-x-12 pt-8">
+<button class="bg-primary text-on-primary px-12 py-5 font-sans tracking-[0.2em] text-xs uppercase hover:bg-neutral-800 transition-all duration-300">
+                                View Collection
+                            </button>
+<button class="flex items-center space-x-4 group text-xs font-sans tracking-widest uppercase font-medium">
+<span class="w-10 h-10 border border-neutral-200 flex items-center justify-center group-hover:border-black transition-colors duration-500">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</span>
+<span>Watch Film</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 left-12">
+<div class="flex flex-col items-start space-y-4">
+<span class="font-sans tracking-[0.3em] text-[10px] uppercase text-neutral-400">01 / 04</span>
+</div>
+</div>
+</section>
+<!-- Featured Products (Bento Grid Restyled for Editorial) -->
+<section class="py-40 bg-white">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-24 border-b border-neutral-100 pb-12">
+<div class="space-y-4">
+<span class="text-accent font-sans tracking-[0.4em] text-[10px] uppercase font-bold">Curated Selects</span>
+<h3 class="text-5xl font-headline italic font-light">The Noir Registry</h3>
+</div>
+<div class="max-w-xs pt-8 md:pt-0">
+<p class="text-neutral-500 text-sm font-light leading-relaxed italic">
+                            Meticulously crafted using rare materials and artisanal techniques. A study in permanence.
+                        </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Large Feature: More air, less background overlay -->
+<div class="md:col-span-7 group zoom-hover">
+<div class="aspect-[4/5] overflow-hidden bg-neutral-100 relative">
+<img alt="Premium product" class="w-full h-full object-cover transition-transform duration-1000" data-alt="Minimalist luxury designer watch on a white marble surface with clean morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIEEGk4wku7GI-v9Tk5pS12dH4C4rAxkYKnC3Zcf02eNObifT8Dx84L8TvU-Y0Bcjot0eFz-YzFjRQkuXiyOKZnXQ-2gRnIUP_h4oD5FHkPst5OHnjj7t5D8KyZ4GraIOyW_yAJi0AIsa1RGjXu5esanlSOv2nmeLe5vBJSr9mH-ft8fJbr-ntbZRNtHTS6Ny2BxRI1eim--nh2kk7qsmYaW0xoMVWj1K4d11fkorhR2JjmKjIqqLfEtcnFSvoaMisR-Emy8RKJ9o"/>
+</div>
+<div class="mt-8 space-y-4">
+<span class="text-accent font-sans tracking-widest text-[10px] font-bold">LIMITED EDITION</span>
+<h4 class="text-3xl font-headline italic">Obsidian Chronograph</h4>
+<p class="text-neutral-500 text-sm font-light max-w-sm">Swiss movement encased in carbon-treated titanium. A silent statement of precision.</p>
+<button class="text-primary font-sans tracking-[0.3em] text-[10px] uppercase border-b border-black/10 pb-1 hover:border-black transition-all pt-2">Shop Now</button>
+</div>
+</div>
+<!-- Side Grid Items: More vertical, asymmetric layout -->
+<div class="md:col-span-5 flex flex-col justify-between">
+<div class="group zoom-hover mb-20">
+<div class="aspect-square overflow-hidden bg-neutral-100">
+<img alt="Luxury scent" class="w-full h-full object-cover transition-transform duration-1000" data-alt="High-end perfume bottle on a stack of art books in a brightly lit room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNnazaWLoKMjoW3JvNZ96dpmDhnBUFTOZCZOwC3nNwoN-Q-DPqLTvNTwfU_2ScLZvQUgho8r4RtBH5wZUa_-pzcIsHQtjdlNXyg9Gs8MPQqsEGAFhL71-RKVvOIvhWGqZ2CfkHodPJcHv7FWlUop16WVsxls7whibtp_4XQZo671aZMcT3_jk-y8CEyXJbAY2CdGFOF8CXoYD5kVD-E7IHlhZH2iBcci0zLJFAQIL01HjaNYDiyoXctL56U46kuxP6XXYcy9eN6AQ"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
+<h4 class="text-xl font-headline italic">Midnight Scent No. 4</h4>
+<span class="text-neutral-400 font-sans tracking-widest text-[10px] uppercase">$240.00</span>
+</div>
+</div>
+<div class="group zoom-hover md:pl-24">
+<div class="aspect-[3/4] overflow-hidden bg-neutral-100">
+<img alt="Designer leather" class="w-full h-full object-cover transition-transform duration-1000" data-alt="Detail of a minimalist black leather handbag with clean edges and silver hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3ObauCHH1yOszOUpftxaugLDNoRofwZvgg9BWcqtLyJ4R_AFr17Gn5Bx4VEHkoMWa6tCcFe08Wt36biL_Abxx4tTbYJaMe2jBq-cF_Etwadf9Xo8WdmrZVlQKoR83lEy_aia0UuAOAN0JRhNQj2AhpiX0uSlNsQjqEzN5LQQyudVcxr2nkB2CkZGdXJlzJ3MEGz-0gTtLUfUFevaRt9lTNSBPUBJk3U0ECDMNnTSxKJfp3RisNXKU11F2smD-mvyTh6PsOESykBc"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
+<h4 class="text-xl font-headline italic">Architect Folio</h4>
+<span class="text-neutral-400 font-sans tracking-widest text-[10px] uppercase">$890.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Philosophy / Narrative: Highly Editorial -->
+<section class="py-60 bg-neutral-50">
+<div class="max-w-[1440px] mx-auto px-12 relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-[4/5] overflow-hidden shadow-2xl">
+<img alt="Artisan process" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Close up of a tailor's hand stitching a garment with white thread on black fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALpt5TU0DBxnpO_2ckXPZsfiA-Yetn4jyvpwD2TobxIPyTEI4Y7hNa8lq19tYWWYwnzG5HioRJ3vrkKxymTHlCWPQ1BhsROzso8GCat8t7JJ6sRnSZ9DyCzlN_Ey2DDl7b0QGFzzmaJCOJDyXUW9PaAFKqBLLII1MeXzjiz589-rk7qxXM1kTiSY7sYxr50VXOv_euaSLwmfa4zJppzKuMxnsyjHMBxJzfbmNpxLxLCLuvLGL5lw9MlHGock8QyrDp-sR4VNC-fwk"/>
+</div>
+<div class="absolute -bottom-16 -left-16 bg-white p-12 editorial-shadow hidden lg:block max-w-xs">
+<p class="font-headline italic text-2xl leading-relaxed">"Beauty is found in the <span class="text-accent">delicate</span> balance of contrast."</p>
+</div>
+</div>
+<div class="space-y-16 order-1 md:order-2">
+<div class="space-y-6">
+<span class="text-accent font-sans tracking-[0.4em] text-[10px] uppercase font-bold">The Philosophy</span>
+<h3 class="text-6xl font-headline italic font-light leading-tight">Mastering the <br/> Cinema of Life.</h3>
+</div>
+<div class="space-y-8 text-neutral-500 font-light leading-loose text-lg max-w-lg">
+<p>Luxury isn't about being noticed; it's about being remembered. Our design language speaks in whispers, utilizing the highest tier of tonal depth and negative space to frame what truly matters.</p>
+<p>Every piece undergoes a rigorous curation process, ensuring that only objects with a soul make it to your collection.</p>
+</div>
+<div class="pt-12 grid grid-cols-2 gap-12 border-t border-neutral-200">
+<div class="space-y-2">
+<h5 class="text-black font-sans tracking-widest text-[10px] uppercase font-bold">Craftsmanship</h5>
+<p class="text-[10px] text-neutral-400 uppercase tracking-[0.2em]">100% Hand-finished</p>
+</div>
+<div class="space-y-2">
+<h5 class="text-black font-sans tracking-widest text-[10px] uppercase font-bold">Exclusivity</h5>
+<p class="text-[10px] text-neutral-400 uppercase tracking-[0.2em]">Small batch production</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Subscription: Minimalist & Clean -->
+<section class="py-40 bg-white border-t border-neutral-100">
+<div class="max-w-2xl mx-auto px-12 text-center space-y-16">
+<div class="space-y-6">
+<h3 class="text-5xl font-headline italic font-light">Join the Inner Circle.</h3>
+<p class="text-neutral-400 font-light text-sm tracking-wide">Private access to seasonal drops and cinematic events.</p>
+</div>
+<div class="relative group max-w-md mx-auto">
+<input class="w-full bg-transparent border-b border-neutral-200 py-6 text-black font-sans tracking-[0.2em] text-xs uppercase focus:outline-none focus:border-black transition-all text-center placeholder:text-neutral-300" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="mt-12 text-black font-sans tracking-[0.4em] text-[10px] uppercase font-bold hover:text-accent transition-colors duration-500">Subscribe Now</button>
+<div class="absolute bottom-0 left-0 w-0 h-[1px] bg-black group-focus-within:w-full transition-all duration-1000"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component Integration -->
+<footer class="w-full bg-neutral-50 border-t border-neutral-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-[1440px] mx-auto relative overflow-hidden">
+<!-- Large decorative brand text -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 font-['Noto_Serif'] text-[12rem] font-black tracking-tighter opacity-5 pointer-events-none select-none vertical-text">
+                ATELIER
+            </div>
+<div class="space-y-8 z-10">
+<div class="font-['Noto_Serif'] text-2xl tracking-[0.2em] font-bold text-black uppercase">ATELIER</div>
+<p class="font-sans text-xs text-neutral-500 uppercase tracking-widest leading-loose">
+                    Defining modern luxury through cinematic precision and artisanal integrity.
+                </p>
+</div>
+<div class="space-y-4 z-10">
+<h5 class="font-sans font-bold text-[10px] uppercase tracking-widest text-black">Menu</h5>
+<ul class="space-y-2">
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Collections</a></li>
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Lookbook</a></li>
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Le Journal</a></li>
+</ul>
+</div>
+<div class="space-y-4 z-10">
+<h5 class="font-sans font-bold text-[10px] uppercase tracking-widest text-black">Information</h5>
+<ul class="space-y-2">
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Sustainability</a></li>
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4 z-10">
+<h5 class="font-sans font-bold text-[10px] uppercase tracking-widest text-black">Connect</h5>
+<ul class="space-y-2">
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Instagram</a></li>
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Contact</a></li>
+<li><a class="font-['Work_Sans'] font-normal tracking-[0.1em] text-xs uppercase text-neutral-600 hover:text-black hover:underline underline-offset-4 transition-all" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center bg-white">
+<p class="font-['Work_Sans'] font-normal tracking-[0.1em] text-[10px] uppercase text-neutral-400">
+                © 2024 ATELIER. ALL RIGHTS RESERVED.
+            </p>
+<div class="flex space-x-6 mt-4 md:mt-0 grayscale opacity-40 hover:opacity-100 transition-opacity">
+<img alt="Partner Logo" class="h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0_G9hBzemls1SHeZqpueillRjr6QcvLkuGyBPpt41LSvQVO-aiB7uUitM1KV3nU1EcChwIHAqxTTjks76W53yfA9WMRZJTMxp9mq07QR2LVApwFPtFSm3urTQ9gOsdzsP-tg9xv4ZzliYDtwTPUrWyO6jxzq6Rs5p0Cy4JkZMfFn8r5z-Ma9V0J6dFt8e74egYWfuQXheoKa2fsjJ36S_KH4uAGqn_ZtuMgi3e9WmfxFdJ-YmAZGpwRkD-EZ-aHRFI190Pr5jkv8"/>
+<img alt="Partner Logo" class="h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTMhVHjC8pf75Swvc0z3OIFTpfDJDrycEpt3aXhAdp_TL9Yjrm_ZWTR7OfRK6YbckeDfkwiWagI3aNYVvWLrEOaxV8JIqh0U67tFXxVkKteJzmxIvjTGgOUwxihPMfRRJjTjokUjc6j2ufqNHnIWR6tD7fu_EgibT-bF2mEMHwLSXFxY_rvHWpHyG_XebKwWUdz6HCy0BexNuOPoTqGxU2HjDul697e5WYaDibbsrLQjlZBC9w5lvDSn_BJcfihPgnW0puxHZRlAQ"/>
+</div>
+</div>
+</footer>
+</body></html>
