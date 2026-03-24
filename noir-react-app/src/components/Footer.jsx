@@ -11,6 +11,14 @@ const Footer = () => {
           <Link className="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" to="/">Journal</Link>
           <Link className="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" to="/about">Privacy</Link>
           <Link className="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" to="/contact">Contact</Link>
+          <a 
+            className="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-100 transition-colors duration-500" 
+            href="https://github.com/GodlLuffy/NOIR_v2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
         </div>
         <div className="text-center space-y-4">
           <p className="font-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500">© 2024 NOIR CINEMATIC. ALL RIGHTS RESERVED.</p>
